@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-import NavList from "@/components/NavList/NavList";
-import { actionItems } from "@/components/NavBar/navItems";
-import NavItem from "@/components/NavItem/NavItem";
+import NavList from "../NavList/NavList";
+import { actionItems } from "../NavBar/navItems";
+import NavItem from "../NavItem/NavItem";
 import styles from "./ActionMenu.module.css";
 
 const ActionMenu: React.FC = () => {

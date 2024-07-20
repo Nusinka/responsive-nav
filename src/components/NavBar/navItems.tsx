@@ -1,5 +1,6 @@
+import React from "react";
 import { HelpCircle, Home, LogOut, Moon, TrendingUp } from "lucide-react";
-import { INavItem } from "@/components/types.js";
+import { INavItem } from "../../types";
 
 export const navItems: INavItem[] = [
   { name: "Home", link: "#" },

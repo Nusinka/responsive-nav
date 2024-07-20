@@ -1,8 +1,8 @@
 import { Menu, X } from "lucide-react";
 
-import { actionItems, navItemsMobile } from "@/components/NavBar/navItems";
-import NavList from "@/components/NavList/NavList";
-import NavItem from "@/components/NavItem/NavItem";
+import { actionItems, navItemsMobile } from "../NavBar/navItems";
+import NavList from "../NavList/NavList";
+import NavItem from "../NavItem/NavItem";
 import styles from "./MobileMenu.module.css";
 
 interface IProps {

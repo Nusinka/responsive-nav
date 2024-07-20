@@ -1,4 +1,4 @@
-import { INavItem } from "@/types";
+import { INavItem } from "../../types";
 import styles from "./NavItem.module.css";
 
 interface IProps extends INavItem {
