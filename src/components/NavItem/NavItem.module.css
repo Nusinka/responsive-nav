@@ -1,0 +1,40 @@
+.navbarItem {
+  list-style-type: none;
+}
+
+.navbarItem:hover {
+  background-color: var(--grey);
+}
+
+.navbarItemInList {
+  border: 1px solid var(--grey);
+  padding: 2.5rem 2rem;
+}
+
+.navbarLink {
+  font-size: 2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--black);
+  position: relative;
+}
+
+.navbarLink svg {
+  width: 46px;
+  height: 46px;
+}
+
+.navbarLink span {
+  letter-spacing: -1.2px;
+}
+
+.activeItemIndicator {
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: -3.1rem;
+  background-color: var(--blue);
+}
