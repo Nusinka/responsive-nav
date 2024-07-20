@@ -1,0 +1,42 @@
+.userMenu {
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+}
+
+.userMenuButton {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  line-height: 2.8;
+}
+
+.userMenuButton svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.userMenuButton span {
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.menu {
+  position: absolute;
+  right: 0.75rem;
+  top: 100%;
+  width: 127%;
+}
+
+.menu ul {
+  flex-direction: column;
+  width: 100%;
+  border-radius: 2rem;
+}

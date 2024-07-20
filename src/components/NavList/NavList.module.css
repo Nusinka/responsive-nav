@@ -3,3 +3,13 @@
   margin: 0;
   background-color: var(--white);
 }
+
+.withGap {
+  gap: 3rem;
+}
+
+@media (min-width: 1225px) {
+  .navList {
+    display: flex;
+  }
+}

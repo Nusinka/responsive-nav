@@ -1,0 +1,9 @@
+.navbarLogo img {
+  height: 4.375rem;
+}
+
+@media (max-width: 1224px) {
+  .navbarLogo {
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,42 @@
+.mobileMenuBtn {
+  display: none;
+}
+
+.mobileMenuBtn {
+  border: none;
+  background-color: transparent;
+  padding-left: 3rem;
+  border-left: 0.16rem solid var(--grey);
+}
+
+.mobileMenuBtn svg {
+  height: 2.625rem;
+  width: 2.625rem;
+}
+
+.mobileActionItems {
+  display: none;
+}
+
+.navbarLinks {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 10.25rem;
+  left: 0;
+  right: 0;
+  border-bottom: 0.16rem solid #e0e0e0;
+  gap: 2rem;
+}
+
+.navbarLinks.open {
+  display: flex;
+}
+
+.mobileMenuBtn {
+  display: block;
+}
+
+.mobileActionItems {
+  display: flex;
+}

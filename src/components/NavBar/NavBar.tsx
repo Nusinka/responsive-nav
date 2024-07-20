@@ -1,12 +1,17 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
 
 import NavItem from "@/components/NavItem/NavItem";
-import NavList from "../NavList/NavList";
+import NavList from "@/components/NavList/NavList";
+import UserMenu from "@/components/ActionMenu/ActionMenu";
+import Logo from "@/components/Logo/Logo";
+import MobileMenu from "@/components/MobileMenu/MobileMenu";
 import { userName } from "@/constants";
-import { actionItems, navItems } from "./navItems";
-import logo from "@/assets/ah-logo.svg";
+import { navItems } from "./navItems";
 import styles from "./NavBar.module.css";
+
+const renderNavItem = navItems.map((item) => (
+  <NavItem key={item.name} {...item} selected={item.name === "Home"} />
+));
 
 const NavBar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,48 +21,22 @@ const NavBar: React.FC = () => {
 
   return (
     <header>
-      <nav className={styles.navbar}>
+      <nav className={`${styles.navbar} ${styles.desktopNavbar}`}>
+        <Logo />
+        <NavList withGap>{renderNavItem}</NavList>
+        <UserMenu />
+      </nav>
+
+      <nav className={`${styles.navbar} ${styles.mobileNavbar}`}>
         {isMobileMenuOpen ? (
           <span className={styles.userName}>{userName}</span>
         ) : (
           <>
-            <div className={styles.navbarLogo}>
-              <img src={logo} alt="Logo" />
-            </div>
+            <Logo />
             <NavItem name="Home" link="#" selected />
           </>
         )}
-        <div
-          className={`${styles.navbarLinks} ${isMobileMenuOpen ? styles.open : ""}`}
-        >
-          <NavList>
-            {navItems.map((item) => (
-              <NavItem
-                key={item.name}
-                name={item.name}
-                link={item.link}
-                icon={item.icon}
-                withIcon
-                inList
-              />
-            ))}
-          </NavList>
-          <NavList>
-            {actionItems.map((item) => (
-              <NavItem
-                key={item.name}
-                name={item.name}
-                link={item.link}
-                icon={item.icon}
-                withIcon
-                inList
-              />
-            ))}
-          </NavList>
-        </div>
-        <button className={styles.mobileMenuBtn} onClick={toggleMobileMenu}>
-          {isMobileMenuOpen ? <X /> : <Menu />}
-        </button>
+        <MobileMenu isOpen={isMobileMenuOpen} toggleOpen={toggleMobileMenu} />
       </nav>
     </header>
   );

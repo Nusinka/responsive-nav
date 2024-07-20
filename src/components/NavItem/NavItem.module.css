@@ -7,8 +7,24 @@
 }
 
 .navbarItemInList {
-  border: 1px solid var(--grey);
-  padding: 2.5rem 2rem;
+  padding: 2.4rem 2rem;
+}
+
+.navbarItemInMenu {
+  padding: 2.2rem 1.8rem;
+}
+
+.navbarItemInMenu:first-of-type {
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+
+.navbarItemInMenu:last-of-type {
+  border-radius: 0rem 0rem 2rem 2rem;
+}
+
+.navbarItemInList,
+.navbarItemInMenu {
+  border: 0.125rem solid var(--grey);
 }
 
 .navbarLink {
@@ -20,21 +36,32 @@
   text-decoration: none;
   color: var(--black);
   position: relative;
+  width: max-content;
 }
 
 .navbarLink svg {
-  width: 46px;
-  height: 46px;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .navbarLink span {
-  letter-spacing: -1.2px;
+  letter-spacing: -0.075rem;
 }
 
 .activeItemIndicator {
-  height: 4px;
+  height: 0.25rem;
   width: 100%;
   position: absolute;
-  bottom: -3.1rem;
+  bottom: -2.9rem;
   background-color: var(--blue);
+}
+
+@media (min-width: 1224px) {
+  .navbarItemInMenu .navbarLink {
+    gap: 1.5rem;
+  }
+
+  .navbarItemInMenu .navbarLink span {
+    letter-spacing: -0.03rem;
+  }
 }
